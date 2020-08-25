@@ -1,13 +1,12 @@
 import React from 'react';
-import { Text } from 'react-native';
 
-import { Container } from './styles';
+import { Wrapper, Heading } from './styles';
 
 const ComingSoon: React.FC = () => {
   return (
-    <Container>
-      <Text>ComingSoon</Text>
-    </Container>
+    <Wrapper>
+      <Heading>Coming soon...</Heading>
+    </Wrapper>
   );
 };
 
