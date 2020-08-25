@@ -1,13 +1,15 @@
 import React from 'react';
-import { Text } from 'react-native';
+import { View } from 'react-native';
 
 import { Wrapper, Container } from './styles';
+
+import Header from '../../components/Header';
 
 const Following: React.FC = () => {
   return (
     <Wrapper>
       <Container>
-        <Text style={{ color: '#fff' }}>Following</Text>
+        <Header />
       </Container>
     </Wrapper>
   );
