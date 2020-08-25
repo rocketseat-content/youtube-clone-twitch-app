@@ -12,7 +12,7 @@ interface Item {
 }
 
 const Following: React.FC = () => {
-  React.useMemo(() => {
+  const { data, indices } = React.useMemo(() => {
     const items: Item[] = [
       {
         key: 'PAGE_HEADING',
@@ -64,7 +64,15 @@ const Following: React.FC = () => {
         <Header />
 
         <Main>
-          <View />
+          <FlatList<Item>
+            data={data}
+            renderItem={({ item }) => item.render()}
+            keyExtractor={(item) => item.key}
+            stickyHeaderIndices={indices}
+            // Refresh Effect
+            onRefresh={() => {}}
+            refreshing={false}
+          />
         </Main>
       </Container>
     </Wrapper>
